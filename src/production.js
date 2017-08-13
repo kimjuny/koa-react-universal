@@ -10,6 +10,6 @@ console.log(`${'[SYS]'.rainbow} webpack building.`);
 webpack(configs).run((err, stats) => {
   console.log(`${'[SYS]'.rainbow} webpack build finished.`);
 
-  const clientStats = stats.toJson().children[0];
+  const clientStats = stats.stats[0];
   require('../build/server/server').default(clientStats);
 });

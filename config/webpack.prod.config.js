@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -34,6 +35,16 @@ const client = {
   ],
 };
 
+const externals = fs
+  .readdirSync(path.resolve(__dirname, '../node_modules'))
+  .filter(x => !/\.bin|react-universal-component|webpack-flush-chunks/.test(x))
+  .reduce((externals, mod) => {
+    externals[mod] = `commonjs ${mod}`
+    return externals
+  }, {});
+
+externals['react-dom/server'] = 'commonjs react-dom/server';
+
 const server = {
   name: 'server',
   target: 'node',
@@ -49,6 +60,7 @@ const server = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  externals,
   module: {
     rules: [
       {
