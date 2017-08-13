@@ -19,3 +19,9 @@ yet another react universal boilerplate.
 ```
 yarn prod
 ```
+
+#### Development
+
+```
+yarn dev
+```
