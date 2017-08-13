@@ -10,10 +10,6 @@ yet another react universal boilerplate.
 
 #### Prerequisites
 
-
-#### Development
-
-
 #### Production
 
 ```
