@@ -722,7 +722,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
 
 babel-plugin-universal-import@^1.2.5:
   version "1.2.5"
-  resolved "http://registry.npm.taobao.org/babel-plugin-universal-import/download/babel-plugin-universal-import-1.2.5.tgz#1c2576dfb80250e735db1770515f7264fdcac9d3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-universal-import/-/babel-plugin-universal-import-1.2.5.tgz#1c2576dfb80250e735db1770515f7264fdcac9d3"
 
 babel-polyfill@^6.23.0:
   version "6.23.0"
