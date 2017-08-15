@@ -1,15 +1,29 @@
 require('colors');
 const path = require('path');
 const webpack = require('webpack');
+const http = require('http');
+const Koa = require('koa');
 const configs = require('../config/webpack.prod.config');
 
-__ROOT__ = path.resolve(__dirname, '../');
-
-console.log(`${'[SYS]'.rainbow} webpack building.`);
+console.log(`${'[SYS]'.rainbow} webpack building...`);
 
 webpack(configs).run((err, stats) => {
-  console.log(`${'[SYS]'.rainbow} webpack build finished.`);
+  const app = new Koa();
 
-  const clientStats = stats.stats[0];
-  require('../build/server/server').default(clientStats);
+  app.use(async (ctx, next) => {
+    ctx.state.webpackStats = stats;
+    await next();
+  });
+
+  const {
+    logger, statics, render,
+  } = require('../build/server/server');
+
+  app.use(logger);
+  app.use(statics);
+  app.use(render);
+
+  http.createServer(app.callback()).listen(process.env.PORT, () => {
+    console.log(`${'[SYS]'.rainbow} server started at port ${process.env.PORT}`);
+  });
 });

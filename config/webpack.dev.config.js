@@ -1,12 +1,11 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
+const commons = require('./commons');
 
-module.exports = {
-  name: 'client',
-  entry: [
-    'babel-polyfill',
-    path.resolve(__dirname, '../src/client/index.jsx'),
-  ],
+const client = {
+  name: commons.client,
+  entry: path.resolve(__dirname, '../src/client/index.jsx'),
   output: {
     path: path.resolve(__dirname, '../build/client'),
     publicPath: '/build/client/',
@@ -33,3 +32,47 @@ module.exports = {
     }),
   ],
 };
+
+const externals = fs
+  .readdirSync(path.resolve(__dirname, '../node_modules'))
+  .filter(x => !/\.bin|react-universal-component|webpack-flush-chunks/.test(x))
+  .reduce((externals, mod) => {
+    externals[mod] = `commonjs ${mod}`
+    return externals
+  }, {});
+
+externals['react-dom/server'] = 'commonjs react-dom/server';
+
+const server = {
+  name: commons.server,
+  target: 'node',
+  entry: path.resolve(__dirname, '../src/server/infrastructure/middlewares'),
+  output: {
+    path: path.resolve(__dirname, '../build/server'),
+    filename: 'server.js',
+    libraryTarget: 'commonjs2',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  externals,
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+      },
+    ],
+  },
+  plugins: [
+    // see: https://github.com/faceyspacey/react-universal-component/issues/10
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1
+    }),
+    new webpack.DefinePlugin({
+      __ROOT__: JSON.stringify(path.resolve(__dirname, '../')),
+    }),
+  ],
+};
+
+module.exports = [client, server];

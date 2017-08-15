@@ -1,15 +1,6 @@
-import webpack from './webpack';
-import statics from './statics';
 
-const middlewares = (app, stats) => {
-  // webpack stats
-  app.use(webpack(stats));
+export const logger = require('./logger').default;
 
-  // static files
-  app.use(statics(`${__ROOT__}/build`, { prefix: '/build' }));
+export const statics = require('./statics')(`${__ROOT__}/build`, { prefix: '/build' });
 
-  // render
-  app.use(require('./render').default);
-};
-
-export default middlewares;
+export const render = require('./render').default;

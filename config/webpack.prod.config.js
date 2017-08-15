@@ -50,7 +50,7 @@ const server = {
   target: 'node',
   entry: [
     'babel-polyfill',
-    path.resolve(__dirname, '../src/server/server.js'),
+    path.resolve(__dirname, '../src/server/infrastructure/middlewares'),
   ],
   output: {
     path: path.resolve(__dirname, '../build/server'),
@@ -73,6 +73,9 @@ const server = {
     // see: https://github.com/faceyspacey/react-universal-component/issues/10
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1
+    }),
+    new webpack.DefinePlugin({
+      __ROOT__: JSON.stringify(path.resolve(__dirname, '../')),
     }),
   ],
 };
