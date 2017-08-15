@@ -19,7 +19,9 @@ const options = {
 console.log(`${'[SYS]'.rainbow} webpack building...`);
 
 webpackServer(app, options).then(({ middlewares }) => {
-  // hot middlewares
+  // hot-middlewares: you may try making any changes from middlewares, 
+  // it will automatically rebuild and reload,
+  // so that you don't have to reboot your server to see the changes.
   const { logger, render } = middlewares;
 
   // apply middlewares

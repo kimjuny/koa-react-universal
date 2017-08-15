@@ -1,14 +1,20 @@
-## koa-react-universal
+# Koa React Universal
 
-yet another react universal boilerplate.
+> koa2、react、react-universal-component、react-router、redux-thunk、webpack、koa-webpack-server
 
-> koa2、react、react-router、redux-thunk、webpack、universal、hmr
+This boilerplate is dedicated to build a concise yet powerful boilerplate for React and Koa2.
+
+> Noted: This package is still on early stage.
 
 ### Roadmap
 
 ### Start
 
 #### Prerequisites
+
+```
+yarn
+```
 
 #### Production
 
@@ -21,3 +27,15 @@ yarn prod
 ```
 yarn dev
 ```
+
+#### Test
+
+```
+yarn test
+```
+
+### License
+
+MIT
+
+### Contributing

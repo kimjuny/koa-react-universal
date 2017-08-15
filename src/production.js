@@ -1,7 +1,5 @@
 require('colors');
-const path = require('path');
 const webpack = require('webpack');
-const http = require('http');
 const Koa = require('koa');
 const configs = require('../config/webpack.prod.config');
 
@@ -23,7 +21,7 @@ webpack(configs).run((err, stats) => {
   app.use(statics);
   app.use(render);
 
-  http.createServer(app.callback()).listen(process.env.PORT, () => {
+  app.listen(process.env.PORT, () => {
     console.log(`${'[SYS]'.rainbow} server started at port ${process.env.PORT}`);
   });
 });
