@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>koa-react-universal</title>
+    <%- styles %>
+  </head>
+  <body>
+    <div id="root"><%- content %></div>
+    <script>
+      try {
+        window.__STATE__ = <%- JSON.stringify(state) %>;
+      } catch (e) {
+        console.error('[ERR] error in getting server redux state');
+      }
+    </script>
+    <%- js %>
+  </body>
+</html>

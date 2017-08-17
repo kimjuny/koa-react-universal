@@ -1,35 +1,58 @@
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
+const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const commons = require('./commons');
 
 const client = {
   name: commons.client,
-  entry: path.resolve(__dirname, '../src/client/index.jsx'),
+  entry: [
+    'babel-polyfill',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false',
+    'react-hot-loader/patch',
+    path.resolve(__dirname, '../src/client/index.jsx'),
+  ],
   output: {
-    path: path.resolve(__dirname, '../build/client'),
     publicPath: '/build/client/',
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].js',
+    chunkFilename: '[name].js',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.less', '.css'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
+      }, {
+        test: /\.less$/,
+        use: ExtractCssChunks.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            }, {
+              loader: 'less-loader',
+            },
+          ],
+        }),
       },
     ],
   },
   plugins: [
+    new ExtractCssChunks(),
     // 'ReferenceError: webpackJsonp is not defined' if this plugin is left out.
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'], // needed to put webpack bootstrap code before chunks.
-      filename: '[name].[chunkhash].js',
+      filename: '[name].js',
       minChunks: Infinity
     }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 };
 
@@ -46,7 +69,10 @@ externals['react-dom/server'] = 'commonjs react-dom/server';
 const server = {
   name: commons.server,
   target: 'node',
-  entry: path.resolve(__dirname, '../src/server/infrastructure/middlewares'),
+  entry: [
+    'babel-polyfill',
+    path.resolve(__dirname, '../src/server/infrastructure/middlewares'),
+  ],
   output: {
     path: path.resolve(__dirname, '../build/server'),
     filename: 'server.js',
@@ -61,6 +87,9 @@ const server = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
+      }, {
+        test: /\.(less|css)$/,
+        loader: 'ignore-loader',
       },
     ],
   },
