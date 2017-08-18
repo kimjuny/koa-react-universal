@@ -1,14 +1,14 @@
 # Koa React Universal ( 👷 work-in-progress 👷 )
 
-> koa2、react、react-universal-component、react-router、redux-thunk、webpack、koa-webpack-server
+> koa2、react、react-universal-component、react-router、redux-thunk、webpack、koa-webpack-server、async/await
 
-This project is dedicated to build most simple yet powerful Koa-React-Universal application boilerplate.
+This project is dedicated to build simple yet powerful Koa-React-Universal application boilerplate.
 
-Universal: We are using [react-universal-component](https://github.com/faceyspacey/react-universal-component)、[webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks). It simplifies <b>universal & code-splitting</b> problem and is compatible with react-router-v4.
+<b>Universal:</b> We are using [react-universal-component](https://github.com/faceyspacey/react-universal-component)、[webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks). It simplifies <b>universal</b> development with <b>code-splitting</b> and is also compatible with react-router-v4.
 
-Production: We are using webpack to build client(target: web) and server(target: node).
+<b>Production:</b> We are using webpack to build client(target: web) and server(target: node).
 
-Development: We are using [koa-webpack-server](https://github.com/kimjuny/koa-webpack-server), it also webpacks client and server(with client & server hot-load), so we can stay as much as the same with production mode.
+<b>Development:</b> We are using [koa-webpack-server](https://github.com/kimjuny/koa-webpack-server), it also webpacks client and server(with client & server hot-load), so we can stay as much as the same with production.
 
 > Noted: This project is still on early stage.
 
@@ -25,10 +25,15 @@ Development: We are using [koa-webpack-server](https://github.com/kimjuny/koa-we
 * webpack-flush-chunks
 * axios
 * ejs
-* jest
-* enzyme
 
 ### Roadmap
+
+* CI
+* flow
+* jest
+* enzyme
+* immutable
+* vendor
 
 ### Start
 

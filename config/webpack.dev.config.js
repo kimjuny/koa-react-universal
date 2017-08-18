@@ -18,6 +18,7 @@ const client = {
     chunkFilename: '[name].js',
   },
   resolve: {
+    alias: commons.alias,
     extensions: ['.js', '.jsx', '.less', '.css'],
   },
   module: {
@@ -40,6 +41,10 @@ const client = {
             },
           ],
         }),
+      }, {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
       },
     ],
   },

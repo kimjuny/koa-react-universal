@@ -1,0 +1,66 @@
+@import "~themes/default.less";
+
+.entry {
+  border-top-style: solid;
+  border-top-color: rgba(200, 200, 200, 0.6);
+  border-top-width: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 66.7%;
+
+    .full-name {
+      margin-top: 0.5em;
+
+      a {
+        max-width: 20em;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        color: #0366d6;
+        text-decoration: none;
+        font-size: 5/3em;
+      }
+    }
+
+    .description {
+      .text-normal;
+      margin-top: 0.5em;
+
+      max-width: 25em;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    } 
+
+    .update-time {
+      .text-normal;
+      margin: 1em 0 1.8em 0;
+    }
+  }
+
+  .middle {
+    width: 16.67%;
+
+    p {
+      .text-normal;
+      margin-top: 1em;
+    }
+  }
+
+  .right {
+
+    p {
+      .text-normal;
+      margin-top: 1em;
+    }
+  }
+}

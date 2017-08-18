@@ -1,4 +1,46 @@
+@import "~themes/default.less";
 
-.text {
-  font-size: 0.8em;
+.home {
+  .code-lines {
+    background: url(~assets/svg/codelines.svg), #2b3137;
+    background-size: cover;
+    background-position: center 10%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .main {
+    width: 100%;
+    padding-top: 30em;
+    padding-bottom: 30em;
+    position: relative;
+
+    .center {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -80%);
+
+      .title {
+        font-size: 5.5em;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        font-family: Roboto, BlinkMacSystemFont, sans-serif;
+        text-align: center;
+      }
+
+      .spec {
+        margin-top: 0.5em;
+        font-size: 2.5em;
+        color: rgba(255, 255, 255, 0.6);
+        -webkit-font-smoothing: antialiased;
+        font-family: Roboto, BlinkMacSystemFont, sans-serif;
+        text-align: center;
+      }
+
+      .search-area {
+        margin-top: 4em;
+        text-align: center;
+      }
+    }
+  }
 }

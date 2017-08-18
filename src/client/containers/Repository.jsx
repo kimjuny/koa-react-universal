@@ -1,20 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
+import Navigator from '../components/common/Navigator';
+import List from '../components/repository/List';
+import Tabs from '../components/repository/Tabs';
+import Main from '../components/repository/Main';
 import { parse } from '../../shared/utils/url';
+import './styles/Repository.less';
 
 class Repository extends React.Component {
   componentDidMount() {
     const { dispatch, repositories, load } = this.props;
     const url = window.location.href;
     const query = parse(url).query;
-    if (typeof load === 'function' && query !== repositories.query) {
+    if (typeof load === 'function' && !_.isEqual(query, repositories.query)) {
       load(dispatch, url);
     }
   }
 
   render() {
     return (
-      <div>repository</div>
+      <div>
+        <Navigator />
+        <Tabs />
+        <Main />
+      </div>
     );
   }
 }

@@ -53,9 +53,9 @@ const render = async (ctx) => {
 
       const chunkNames = flushChunkNames();
       const stats = getClientStats(ctx.state.webpackStats);
-      const { js, styles } = webpackFlushChunks(stats.toJson(), { chunkNames });
+      const { js, styles, cssHash } = webpackFlushChunks(stats.toJson(), { chunkNames });
 
-      await ctx.render('200', { content, js, styles, state: store.getState() });
+      await ctx.render('200', { content, js, styles, cssHash, state: store.getState() });
     } else {
       await ctx.render('404', { message: 'Page not found :-(' });
     }
