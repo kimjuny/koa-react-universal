@@ -6,6 +6,12 @@ class SearchBar extends PureComponent {
     router: PropTypes.object,
   }
 
+  constructor() {
+    super();
+    this.onChange = this.onChange.bind(this);
+    this.onSearch = this.onSearch.bind(this);
+  }
+
   state = {
     value: '',
   }
@@ -27,8 +33,17 @@ class SearchBar extends PureComponent {
   render() {
     return (
       <div>
-        <input value={this.state.value} onChange={this.onChange.bind(this)} placeholder="Repositories..." />
-        <button type="button" onClick={this.onSearch.bind(this)}>Search</button>
+        <input
+          value={this.state.value}
+          onChange={this.onChange}
+          placeholder="Repositories..."
+        />
+        <button
+          type="button"
+          onClick={this.onSearch}
+        >
+          Search
+        </button>
       </div>
     );
   }

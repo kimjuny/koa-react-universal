@@ -8,13 +8,13 @@ import Routes from './routes';
 const store = configureStore(window.__STATE__);
 
 const render = (Component) => {
-  ReactDOM.render(
+  ReactDOM.render((
     <Provider store={store}>
       <BrowserRouter>
         <Component />
       </BrowserRouter>
     </Provider>
-  , document.getElementById('root'));
+  ), document.getElementById('root'));
 };
 
 if (module.hot) {

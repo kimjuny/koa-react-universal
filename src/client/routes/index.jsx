@@ -22,10 +22,8 @@ export const routes = [
   },
 ];
 
-const Routes = () => (
+export default () => (
   <Switch>
     { routes.map(route => <RouteWithSubRoutes {...route} />) }
   </Switch>
 );
-
-export default Routes;

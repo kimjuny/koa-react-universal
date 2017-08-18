@@ -1,11 +1,12 @@
 {
   "author": "Eric Kim",
   "license": "MIT",
-  "git": "https://github.com/kimjuny/koa-react-universal",
+  "repository": "https://github.com/kimjuny/koa-react-universa",
   "scripts": {
-    "clean": "rm -rf build",
+    "clean": "rimraf build",
     "prod": "npm run clean && cross-env NODE_ENV=production PORT=3006 node ./src/production",
-    "dev": "cross-env NODE_ENV=development PORT=3006 node ./src/development"
+    "dev": "cross-env NODE_ENV=development PORT=3006 node ./src/development",
+    "lint": "./node_modules/.bin/eslint src"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -23,10 +24,12 @@
     "react-universal-component": "^2.3.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "url-parse": "^1.1.9"
+    "url-parse": "^1.1.9",
+    "webpack-flush-chunks": "^1.1.22"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-universal-import": "^1.2.5",
@@ -36,13 +39,18 @@
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.2.1",
     "extract-css-chunks-webpack-plugin": "^2.0.16",
     "ignore-loader": "^0.1.2",
     "koa-webpack-server": "^0.2.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "react-hot-loader": "next",
-    "webpack": "^3.5.3",
-    "webpack-flush-chunks": "^1.1.18"
+    "rimraf": "^2.6.1",
+    "webpack": "^3.5.3"
   }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import SearchRepository from '../components/common/SearchRepository';
+import SearchBar from '../components/common/SearchBar';
 import './styles/Home.less';
 
 const Home = () => (
   <div>
-    <SearchRepository />
+    <SearchBar />
   </div>
 );
 

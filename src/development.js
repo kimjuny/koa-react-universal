@@ -21,7 +21,7 @@ const options = {
 console.log(`${'[SYS]'.rainbow} webpack building...`);
 
 webpackServer(app, options).then(({ middlewares }) => {
-  const { logger, favicon, statics, views, render } = middlewares;
+  const { logger, favicon, views, render } = middlewares;
 
   app.use(logger);
   app.use(favicon);
@@ -31,5 +31,5 @@ webpackServer(app, options).then(({ middlewares }) => {
   app.listen(process.env.PORT, () => {
     console.log(`${'[SYS]'.rainbow} server started at port %s`, process.env.PORT);
   });
-}).catch((err) => {
+}).catch(() => {
 });

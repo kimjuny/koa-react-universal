@@ -13,7 +13,6 @@ class Repository extends React.Component {
   }
 
   render() {
-    console.log(this.props.repositories);
     return (
       <div>repository</div>
     );

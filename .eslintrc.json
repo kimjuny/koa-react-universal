@@ -1,0 +1,17 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "rules": {
+        "no-await-in-loop": 0,
+        "no-shadow": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": 0,
+        "no-underscore-dangle": 0,
+        "global-require": 0
+    },
+    "globals": {
+        "__ROOT__": true,
+        "document": true,
+        "window": true
+    }
+}

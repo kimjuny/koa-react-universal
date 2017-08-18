@@ -1,8 +1,8 @@
 import create from './create';
 import API from '../../../shared/http/api';
 
-export const listRepositories = ({ query }) => {
-  return create(async (dispatch) => {
+export const listRepositories = ({ query }) =>
+  create(async (dispatch) => {
     dispatch({
       type: 'setRepositories',
       payload: { sync: false },
@@ -18,4 +18,3 @@ export const listRepositories = ({ query }) => {
       },
     });
   });
-}

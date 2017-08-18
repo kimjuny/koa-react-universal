@@ -33,8 +33,8 @@ const client = {
             {
               loader: 'css-loader',
               options: {
-                localIdentName: '[name]__[local]--[hash:base64:5]'
-              }
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
             }, {
               loader: 'less-loader',
             },
@@ -60,8 +60,8 @@ const externals = fs
   .readdirSync(path.resolve(__dirname, '../node_modules'))
   .filter(x => !/\.bin|react-universal-component|webpack-flush-chunks/.test(x))
   .reduce((externals, mod) => {
-    externals[mod] = `commonjs ${mod}`
-    return externals
+    externals[mod] = `commonjs ${mod}`;
+    return externals;
   }, {});
 
 externals['react-dom/server'] = 'commonjs react-dom/server';

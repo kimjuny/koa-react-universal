@@ -1,4 +1,3 @@
-import path from 'path';
 import views from 'koa-views';
 
 export default views(

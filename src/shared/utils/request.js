@@ -1,12 +1,10 @@
 import axios from 'axios';
 import RequestError from '../base/exceptions/RequestError';
 
-const postProcess = (response) => {
-  return response.data;
-};
+const postProcess = response => response.data;
 
 export default function request(url, options) {
-  return axios({ url, timeout: 8000, ...url })
+  return axios({ url, timeout: 8000, ...options })
     .then(postProcess)
     .catch((error) => {
       const response = error.response;

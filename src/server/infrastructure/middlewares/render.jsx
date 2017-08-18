@@ -1,9 +1,8 @@
 import 'colors';
 import React from 'react';
-import { StaticRouter } from 'react-router-dom';
+import { StaticRouter, matchPath } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
-import { matchPath } from 'react-router-dom';
 import { flushChunkNames } from 'react-universal-component/server';
 import webpackFlushChunks from 'webpack-flush-chunks';
 import Routes, { routes } from '../../../client/routes';
@@ -14,25 +13,29 @@ const getClientStats = (stats) => {
   if (stats && Array.isArray(stats.stats)) {
     return stats.stats.find(node =>
       node.compilation.name === commons.client);
-  } else if(stats && stats.compilation.name === commons.client) {
+  } else if (stats && stats.compilation.name === commons.client) {
     return stats;
   }
-}
+  return undefined;
+};
 
 const match = async (ctx, routes, dispatch) => {
-  for (let i =0; i < routes.length; i += 1) {
+  for (let i = 0; i < routes.length; i += 1) {
     const route = routes[i];
     if (matchPath(ctx.path, route)) {
-      if (typeof route.load === 'function')
+      if (typeof route.load === 'function') {
         await route.load(dispatch, ctx.request.href);
-      if (route.routes && route.routes.length > 0)
+      }
+      if (route.routes && route.routes.length > 0) {
         await match(ctx, route.routes, dispatch);
+      }
       return true;
     }
   }
+  return false;
 };
 
-const render = async (ctx, next) => {
+const render = async (ctx) => {
   try {
     const store = configureStore();
 
@@ -45,7 +48,7 @@ const render = async (ctx, next) => {
           >
             <Routes />
           </StaticRouter>
-        </Provider>
+        </Provider>,
       );
 
       const chunkNames = flushChunkNames();
