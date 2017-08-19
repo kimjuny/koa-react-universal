@@ -4,6 +4,7 @@
   "repository": "https://github.com/kimjuny/koa-react-universa",
   "scripts": {
     "clean": "rimraf build",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --colors --progress --config ./config/webpack.prod.config.js",
     "prod": "npm run clean && cross-env NODE_ENV=production PORT=3006 node ./src/production",
     "dev": "cross-env NODE_ENV=development PORT=3006 node ./src/development",
     "lint": "./node_modules/.bin/eslint src"

@@ -93,7 +93,7 @@ const server = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
       }, {
-        test: /\.(less|css)$/,
+        test: /\.(less|css|svg)$/,
         loader: 'ignore-loader',
       },
     ],

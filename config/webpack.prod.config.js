@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
+const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const commons = require('./commons');
 
 const client = {
-  name: 'client',
+  name: commons.client,
   entry: [
     'babel-polyfill',
     path.resolve(__dirname, '../src/client/index.jsx'),
@@ -15,17 +17,37 @@ const client = {
     chunkFilename: '[name].[chunkhash].js',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    alias: commons.alias,
+    extensions: ['.js', '.jsx', '.less', '.css'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
+      }, {
+        test: /\.less$/,
+        use: ExtractCssChunks.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+            }, {
+              loader: 'less-loader',
+            },
+          ],
+        }),
+      }, {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
       },
     ],
   },
   plugins: [
+    new ExtractCssChunks(),
     // 'ReferenceError: webpackJsonp is not defined' if this plugin is left out.
     new webpack.optimize.CommonsChunkPlugin({
       names: ['bootstrap'], // needed to put webpack bootstrap code before chunks.
@@ -46,7 +68,7 @@ const externals = fs
 externals['react-dom/server'] = 'commonjs react-dom/server';
 
 const server = {
-  name: 'server',
+  name: commons.server,
   target: 'node',
   entry: [
     'babel-polyfill',
@@ -66,6 +88,9 @@ const server = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
+      }, {
+        test: /\.(css|less|svg)$/,
+        loader: 'ignore-loader',
       },
     ],
   },
