@@ -34,8 +34,8 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <Navigator />
         <div className="main code-lines">
+          <Navigator />
           <div className="center">
             <div className="title">
               Koa React Universal
@@ -48,7 +48,7 @@ class Home extends React.Component {
                 value={this.state.search}
                 onChange={this.onChange}
                 onEnter={this.onEnter}
-                placeholder="Search Github Repositories (i.e. lodash、webpack...)"
+                placeholder="Search Github Repositories (i.e. webpack、react...)"
               />
             </div>
           </div>

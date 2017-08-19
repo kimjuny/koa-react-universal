@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import Navigator from '../components/common/Navigator';
-import List from '../components/repository/List';
 import Tabs from '../components/repository/Tabs';
 import Main from '../components/repository/Main';
 import { parse } from '../../shared/utils/url';

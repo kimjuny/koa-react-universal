@@ -13,10 +13,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
-    width: 66.7%;
+    width: 67%;
 
     .full-name {
-      margin-top: 0.5em;
+      margin-top: 2em;
 
       a {
         max-width: 19em;
@@ -27,6 +27,7 @@
         color: #0366d6;
         text-decoration: none;
         font-size: 5/3em;
+        font-weight: 600;
       }
     }
 
@@ -41,6 +42,21 @@
       overflow: hidden;
     } 
 
+    .topics {
+      display: flex;
+      margin-top: 0.5em;
+
+      .topic {
+        .text-normal;
+
+        font-size: 3/4em;
+        padding: 0.3em 0.9em;
+        margin: 0 1em 0 0;
+        color: rgb(3, 102, 214);
+        background-color: #f1f8ff;
+      }
+    }
+
     .update-time {
       .text-normal;
       margin: 1em 0 1.8em 0;
@@ -48,8 +64,8 @@
   }
 
   .middle {
-    width: 16.67%;
-    margin-top: 1em;
+    width: 17%;
+    margin-top: 2.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -68,14 +84,16 @@
   }
 
   .right {
-    margin-top: 1em;
+    width: 16%;
+    margin-top: 2.5em;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
 
     p {
       .text-normal;
-      margin: 0 0 0 0.2em;
+      margin: 0 1em 0 0.2em;
     }
   }
 }

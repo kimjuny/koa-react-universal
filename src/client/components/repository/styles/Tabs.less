@@ -1,8 +1,31 @@
 .tabs {
-  height: 5.5em;
+  height: 4.5em;
   background-color: white;
 
   border-bottom-style: solid;
   border-bottom-color: rgba(200, 200, 200, 0.6);
   border-bottom-width: 1px;
+
+  .tabs-main {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .tab {
+      margin: 0 1.5em;
+
+      span {
+        color: #586069;
+        background-color: rgba(27, 31, 35, 0.08);
+        border-radius: 5/4em;
+        font-size: 6/7em;
+        font-weight: 600;
+        padding: 1px 5px;
+        margin-left: 1/2em;
+      }
+    }
+  }
 }

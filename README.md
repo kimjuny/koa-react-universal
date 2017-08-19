@@ -4,7 +4,7 @@
 
 This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universal application boilerplate.
 
-<b>Less is More:</b> All key ingredients are in `src/development`、`src/production` and webpack configurations, easy to setup and extend. We promise to use official stuffs(as much as we can), no weird or tricky stuffs, keeping this project <b>clean and customizable</b>.
+<b>Less is More:</b> All key ingredients are in `src/development`、`src/production` and webpack configurations, easy to understand、set-up and extend. We promise to use the most recent & official packages(as much as we can), no weird or tricky stuffs, keeping this project <b>clean and fully customizable</b>.
 
 <b>Universal:</b> We are using [react-universal-component](https://github.com/faceyspacey/react-universal-component)、[webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks). It simplifies <b>universal</b> development with <b>code-splitting</b>(js、css) and is also compatible with the latest react-router-v4.
 
@@ -15,6 +15,8 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 > Noted: This project is still on early stage.
 
 ### Screenshots
+
+> Noted: Github API has a [Rate Limiting](https://developer.github.com/v3/search/#rate-limit) 10request/min.
 
 ### Components
 
@@ -45,9 +47,8 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 #### Prerequisites
 
-```
-yarn
-```
+* yarn / npm
+* node ≥ 7.0
 
 #### Production
 

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import classNames from 'classnames';
 import './styles/TextInput.less';
 
 class TextInput extends PureComponent {
@@ -23,13 +24,21 @@ class TextInput extends PureComponent {
   }
 
   render() {
-    const { placeholder, value } = this.props;
+    const { placeholder, value, size, theme } = this.props;
+
+    const className = classNames({
+      'text-input': true,
+      'text-input-lg': !size || size === 'lg',
+      'text-input-sm': size === 'sm',
+      'text-input-white': !theme || theme === 'white',
+      'text-input-dark': theme === 'dark',
+    });
 
     return (
       <div>
         <input
           type="text"
-          className="text-input"
+          className={className}
           placeholder={placeholder}
           value={value}
           onChange={this.onChange}

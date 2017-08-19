@@ -1,9 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Entry from './Entry';
+import './styles/List.less';
 
 const List = ({ repositories }) => {
-  const render = () => {
+  const renderTotal = () => {
+    if (repositories.data) {
+      return <h2>{ repositories.total } repository result</h2>;
+    }
+    return null;
+  };
+
+  const renderList = () => {
     if (!repositories.data) {
       return <div>Loading...</div>;
     }
@@ -12,8 +20,9 @@ const List = ({ repositories }) => {
   };
 
   return (
-    <div>
-      { render() }
+    <div className="list">
+      { renderTotal() }
+      { renderList() }
     </div>
   );
 };
