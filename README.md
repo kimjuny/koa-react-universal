@@ -16,7 +16,7 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 ### Screenshots
 
-> Noted: Github API has a [Rate Limiting](https://developer.github.com/v3/search/#rate-limit) 10request/min.
+> Noted: Github API has a [Rate Limiting](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
 
 ### Components
 
@@ -35,8 +35,9 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 ### Roadmap
 
-* graphql(github REST API -> github graphql API)
+* graphql(Github API v3 -> v4)
 * continuous integration
+* docker
 * flow
 * jest
 * enzyme

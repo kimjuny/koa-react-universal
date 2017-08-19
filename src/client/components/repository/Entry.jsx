@@ -11,7 +11,7 @@ const Entry = ({ repository }) => (
         { repository.description }
       </div>
       <div className="topics">
-        { repository.topics.splice(0, 4).map(topic => <div className="topic" key={topic}>{topic}</div>) }
+        { repository.topics.slice().splice(0, 4).map(topic => <div className="topic" key={topic}>{topic}</div>) }
       </div>
       <div className="update-time">
         { repository.updated_at }

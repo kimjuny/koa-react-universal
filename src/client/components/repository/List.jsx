@@ -6,7 +6,7 @@ import './styles/List.less';
 const List = ({ repositories }) => {
   const renderTotal = () => {
     if (repositories.data) {
-      return <h2>{ repositories.total } repository result</h2>;
+      return <h2>{ repositories.total } repository results</h2>;
     }
     return null;
   };
