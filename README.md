@@ -1,6 +1,6 @@
-# Koa React Universal ( 👷 work-in-progress 👷 )
+# Koa React Universal
 
-> koa2、react、react-universal-component、koa-webpack-server、async/await、code-splitting、hot-module-replacement
+> koa2、react、react-universal-component、koa-webpack-server、async/await、code-splitting、hot-module-replacement、react-router4、redux-thunk
 
 This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universal application boilerplate.
 
@@ -12,13 +12,13 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 <b>Development:</b> We are using [koa-webpack-server](https://github.com/kimjuny/koa-webpack-server) (which simplifies development env set-ups), it also webpacks client and server(with client & server hot-load), so we can stay as much as the same with production.
 
-> Noted: This project is still on early stage.
+> Noted: This project is still on early stage. ( 👷 work-in-progress 👷 )
 
 ### Screenshots
 
-Example: Search Github Repositories.
+DEMO: Search Github Repositories.
 
-> Noted: Github API has a [Rate Limitation](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
+> Noted: Github search API has a [Rate Limitation](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
 
 ![screenshots_01](https://github.com/kimjuny/koa-react-universal/blob/master/docs/screenshots_00.gif)
 
