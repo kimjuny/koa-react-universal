@@ -13,7 +13,7 @@ const List = ({ repositories }) => {
 
   const renderList = () => {
     if (!repositories.data) {
-      return <div>Loading...</div>;
+      return null;
     }
     return repositories.data.map(repository =>
       <Entry key={repository.full_name} repository={repository} />);

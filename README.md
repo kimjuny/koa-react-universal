@@ -10,7 +10,7 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 <b>Production:</b> We are using webpack to build client(target: web) and server(target: node).
 
-<b>Development:</b> We are using [koa-webpack-server](https://github.com/kimjuny/koa-webpack-server), it also webpacks client and server(with client & server hot-load), so we can stay as much as the same with production.
+<b>Development:</b> We are using [koa-webpack-server](https://github.com/kimjuny/koa-webpack-server) (which simplifies development env set-ups), it also webpacks client and server(with client & server hot-load), so we can stay as much as the same with production.
 
 > Noted: This project is still on early stage.
 

@@ -54,6 +54,7 @@
     "koa-webpack-server": "^0.2.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "open-browser-webpack-plugin": "^0.0.5",
     "react-hot-loader": "next",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.3"

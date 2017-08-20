@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const commons = require('./commons');
 
 const client = {
@@ -58,6 +59,7 @@ const client = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new OpenBrowserPlugin({ url: 'http://localhost:3006' }),
   ],
 };
 

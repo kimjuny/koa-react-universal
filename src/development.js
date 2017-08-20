@@ -20,9 +20,11 @@ const options = {
 
 console.log(`${'[SYS]'.rainbow} webpack building...`);
 
+// koa-webpack-server: https://github.com/kimjuny/koa-webpack-server
 webpackServer(app, options).then(({ middlewares }) => {
   const { logger, favicon, views, render } = middlewares;
 
+  // koa2 middlewares
   app.use(logger);
   app.use(favicon);
   app.use(views);
