@@ -24,7 +24,8 @@ console.log(`${'[SYS]'.rainbow} webpack building...`);
 webpackServer(app, options).then(({ middlewares }) => {
   const { logger, favicon, views, render } = middlewares;
 
-  // koa2 middlewares
+  // koa2 hot middlewares: once changes are detected in these middlewares, they will be hot reloaded,
+  // so you don't have to restart your node server.
   app.use(logger);
   app.use(favicon);
   app.use(views);

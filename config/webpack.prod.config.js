@@ -54,6 +54,11 @@ const client = {
       filename: '[name].[chunkhash].js',
       minChunks: Infinity
     }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false
+      }
+    }),
   ],
 };
 
@@ -101,6 +106,11 @@ const server = {
     }),
     new webpack.DefinePlugin({
       __ROOT__: JSON.stringify(path.resolve(__dirname, '../')),
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false
+      }
     }),
   ],
 };
