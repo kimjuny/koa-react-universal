@@ -16,7 +16,11 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 ### Screenshots
 
-> Noted: Github API has a [Rate Limiting](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
+Example: Search Github Repositories.
+
+> Noted: Github API has a [Rate Limitation](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
+
+![screenshots_01](https://github.com/kimjuny/koa-react-universal/blob/master/docs/screenshots_00.gif)
 
 ### Components
 
@@ -48,8 +52,14 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 #### Prerequisites
 
+development
+
 * yarn / npm
 * node ≥ 7.0
+
+production
+
+* docker ≥ 1.13
 
 #### Production
 
