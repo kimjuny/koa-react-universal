@@ -18,7 +18,7 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 DEMO: Search Github Repositories.
 
-> Noted: Github search API has a [Rate Limitation](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
+> Noted: Github search API has [Rate Limitation](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
 
 ![screenshots_01](https://github.com/kimjuny/koa-react-universal/blob/master/docs/screenshots_00.gif)
 

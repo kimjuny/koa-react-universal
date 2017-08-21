@@ -2,3 +2,4 @@
 /config/
 /node_modules/
 /scripts/
+**/__tests__/
