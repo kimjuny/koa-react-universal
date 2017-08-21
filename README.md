@@ -38,14 +38,13 @@ DEMO: Search Github Repositories.
 * webpack-flush-chunks
 * axios
 * ejs
+* jest
 
 ### Roadmap
 
 * graphql(Github API v3 -> v4)
-* continuous integration
 * docker
 * flow
-* jest
 * enzyme
 * immutable
 * vendor

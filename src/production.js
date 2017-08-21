@@ -1,3 +1,4 @@
+/* eslint-disable no-console, import/no-unresolved */
 require('colors');
 const webpack = require('webpack');
 const Koa = require('koa');
@@ -16,7 +17,6 @@ webpack(configs).run((err, stats) => {
 
   const {
     logger, favicon, statics, views, render,
-  // eslint-disable-next-line import/no-unresolved
   } = require('../build/server/server');
 
   // koa2 middlewares
@@ -31,3 +31,4 @@ webpack(configs).run((err, stats) => {
     console.log(`${'[SYS]'.rainbow} server started at port ${process.env.PORT}`);
   });
 });
+/* eslint-enable */

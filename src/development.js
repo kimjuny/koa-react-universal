@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 require('colors');
 const Koa = require('koa');
 const webpack = require('webpack');
@@ -36,3 +37,4 @@ webpackServer(app, options).then(({ middlewares }) => {
   });
 }).catch(() => {
 });
+/* eslint-enable */
