@@ -1,5 +1,4 @@
-
-'use strict'
+/* eslint-disable */
 
 /**
  * Module dependencies.
@@ -75,3 +74,5 @@ function serve (root, opts) {
     }
   }
 }
+
+/* eslint-enable */
