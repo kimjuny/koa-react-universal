@@ -1,0 +1,27 @@
+languages:
+  Javascript: true
+
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript:
+  eslint:
+    enable: true
+    config:
+      config: .eslintrc
+    checks:
+      import/no-unresolved:
+        enabled: false
+
+ratings:
+  paths:
+  - "src/**"
+
+exclude_paths:
+- "build/"
+- "config/"
+- "docs/"
+- "node_modules/"
+- "scripts/"
