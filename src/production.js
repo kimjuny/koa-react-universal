@@ -16,6 +16,7 @@ webpack(configs).run((err, stats) => {
 
   const {
     logger, favicon, statics, views, render,
+  // eslint-disable-next-line import/no-unresolved
   } = require('../build/server/server');
 
   // koa2 middlewares
