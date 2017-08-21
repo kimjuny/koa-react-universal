@@ -1,6 +1,8 @@
 # Koa React Universal
 
 [![Build Status](https://travis-ci.org/kimjuny/koa-react-universal.svg?branch=master)](https://travis-ci.org/kimjuny/koa-react-universal)
+[![Code Climate](https://codeclimate.com/github/kimjuny/koa-react-universal/badges/gpa.svg)](https://codeclimate.com/github/kimjuny/koa-react-universal)
+[![Test Coverage](https://codeclimate.com/github/kimjuny/koa-react-universal/badges/coverage.svg)](https://codeclimate.com/github/kimjuny/koa-react-universal/coverage)
 
 > koa2、react、react-universal-component、koa-webpack-server、async/await、code-splitting、hot-module-replacement、react-router4、redux-thunk
 
