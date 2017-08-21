@@ -1,5 +1,7 @@
 # Koa React Universal
 
+[![Build Status](https://travis-ci.org/kimjuny/koa-react-universal.svg?branch=master)](https://travis-ci.org/kimjuny/koa-react-universal)
+
 > koa2、react、react-universal-component、koa-webpack-server、async/await、code-splitting、hot-module-replacement、react-router4、redux-thunk
 
 This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universal application boilerplate.
