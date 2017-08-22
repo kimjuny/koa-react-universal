@@ -41,7 +41,7 @@ class Home extends React.Component {
               Koa React Universal
             </div>
             <div className="spec">
-              An easy-to-setup boilerplate for isomorphic react application.
+              A lightweight boilerplate for isomorphic react application.
             </div>
             <div className="search-area">
               <TextInput

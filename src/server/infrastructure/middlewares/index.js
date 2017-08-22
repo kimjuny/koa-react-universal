@@ -1,3 +1,4 @@
+// index for all the koa2 middlewares
 
 export const logger = require('./logger').default;
 

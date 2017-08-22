@@ -68,6 +68,12 @@ production
 yarn prod
 ```
 
+or with docker
+
+```
+yarn prod:docker
+```
+
 #### Development
 
 ```
