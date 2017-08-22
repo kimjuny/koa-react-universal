@@ -10,4 +10,12 @@ describe('models/actions/create', () => {
     expect(action).toBeDefined();
     expect(action()).toBeInstanceOf(Promise);
   });
+
+  it('should throw an error', () => {
+    const error = 'an error!';
+    const action = create(async (dispatch) => {
+      throw error;
+    });
+    expect(action()).rejects.toMatch(error);
+  });
 });
