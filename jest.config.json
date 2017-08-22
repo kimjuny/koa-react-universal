@@ -1,0 +1,14 @@
+{
+  "notify": true,
+  "collectCoverage": true,
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/config/",
+    "<rootDir>/build/",
+    "<rootDir>/coverage/",
+    "<rootDir>/docs/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/scripts/"
+  ],
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["lcov", "text-summary"]
+}

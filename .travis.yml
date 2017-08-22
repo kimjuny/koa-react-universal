@@ -1,17 +1,12 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=28c86855122bc245dd440cd9e39ba32a11eab19562afd4aafa0cfcdb3afdc26f
-    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+    - CODECLIMATE_REPO_TOKEN=28c86855122bc245dd440cd9e39ba32a11eab19562afd4aafa0cfcdb3afdc26f
 language: node_js
 node_js:
   - stable
 cache: yarn
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
 script:
   - yarn lint && yarn test
-  - bundle exec rspec
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  - yarn codecov
 notifications:
   email: false

@@ -8,7 +8,8 @@
     "prod": "npm run clean && cross-env NODE_ENV=production PORT=3006 node ./src/production",
     "dev": "cross-env NODE_ENV=development PORT=3006 node ./src/development",
     "lint": "./node_modules/.bin/eslint src",
-    "test": "jest"
+    "test": "./node_modules/.bin/jest --config jest.config.json --no-cache",
+    "codecov": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -41,6 +42,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "codeclimate-test-reporter": "^0.5.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
     "eslint": "^4.4.1",
