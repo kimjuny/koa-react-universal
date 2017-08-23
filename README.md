@@ -1,5 +1,7 @@
 # Koa React Universal
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kimjuny/koa-react-universal.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/kimjuny/koa-react-universal.svg?branch=master)](https://travis-ci.org/kimjuny/koa-react-universal)
 [![Code Climate](https://codeclimate.com/github/kimjuny/koa-react-universal/badges/gpa.svg)](https://codeclimate.com/github/kimjuny/koa-react-universal)
 [![Test Coverage](https://codeclimate.com/github/kimjuny/koa-react-universal/badges/coverage.svg)](https://codeclimate.com/github/kimjuny/koa-react-universal/coverage)
