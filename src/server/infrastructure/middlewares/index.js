@@ -1,4 +1,5 @@
-// index for all the koa2 middlewares
+// this index file is the entry of webpack server-side config.
+// just export all your async koa2 middlewares here.
 
 export const logger = require('./logger').default;
 
