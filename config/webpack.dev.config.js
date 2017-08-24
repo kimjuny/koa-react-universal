@@ -38,6 +38,8 @@ const client = {
                 localIdentName: '[name]__[local]--[hash:base64:5]',
               },
             }, {
+              loader: 'postcss-loader',
+            }, {
               loader: 'less-loader',
             },
           ],
