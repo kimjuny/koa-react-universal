@@ -23,7 +23,7 @@ DEMO: Search Github Repositories.
 
 > Noted: Github search API has [Rate Limitation](https://developer.github.com/v3/search/#rate-limit) of 10 reqs/min.
 
-![screenshots_01](https://github.com/kimjuny/koa-react-universal/blob/master/docs/screenshots_00.gif)
+![record](https://github.com/kimjuny/koa-react-universal/blob/master/docs/record.gif)
 
 ### Components
 
