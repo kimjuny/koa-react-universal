@@ -1,6 +1,3 @@
-languages:
-  Javascript: true
-
 engines:
   duplication:
     enabled: true
@@ -22,6 +19,7 @@ ratings:
 exclude_paths:
 - "build/"
 - "config/"
+- "coverage/"
 - "docs/"
 - "node_modules/"
 - "scripts/"
