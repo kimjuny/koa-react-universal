@@ -8,7 +8,7 @@ engines:
       languages:
       - javascript:
   eslint:
-    enable: true
+    enabled: true
     config:
       config: .eslintrc
     checks:
