@@ -33,6 +33,7 @@
     "webpack-flush-chunks": "^1.1.22"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
@@ -59,6 +60,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "open-browser-webpack-plugin": "^0.0.5",
+    "postcss-loader": "^2.0.6",
     "react-hot-loader": "next",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.3"

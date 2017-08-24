@@ -33,7 +33,7 @@ DEMO: Search Github Repositories.
 * redux-thunk
 * react-universal-component
 * es2015 + async/await
-* less
+* less、postcss(autoprefixer)
 * webpack
 * koa-webpack-server
 * webpack-flush-chunks
