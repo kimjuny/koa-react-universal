@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/common/TextInput TextInput should render correctly 1`] = `
+<div>
+  <input
+    className="text-input text-input-lg text-input-white"
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder={undefined}
+    type="text"
+    value={undefined}
+  />
+</div>
+`;

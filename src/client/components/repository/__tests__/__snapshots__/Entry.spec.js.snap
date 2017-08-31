@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/repository/Entry Entry should render correctly 1`] = `
+<div
+  className="entry"
+>
+  <div
+    className="left"
+  >
+    <div
+      className="full-name"
+    >
+      <a
+        href=""
+      >
+        full_name
+      </a>
+    </div>
+    <div
+      className="description"
+    >
+      description
+    </div>
+    <div
+      className="topics"
+    />
+    <div
+      className="update-time"
+    />
+  </div>
+  <div
+    className="middle"
+  >
+    <span
+      className="language"
+    />
+    <p>
+      language
+    </p>
+  </div>
+  <div
+    className="right"
+  >
+    <svg
+      className="start"
+      height="20"
+      role="img"
+      version="1.1"
+      viewBox="0 0 14 16"
+      width="15"
+    >
+      <path
+        d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"
+        fillRule="evenodd"
+      />
+    </svg>
+    <p>
+      100
+    </p>
+  </div>
+</div>
+`;
