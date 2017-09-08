@@ -7,7 +7,7 @@
 
 > koa2、react、react-universal-component、koa-webpack-server、async/await、code-splitting、hot-module-replacement、react-router4、redux-thunk
 
-This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universal application boilerplate.
+This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universal boilerplate.
 
 <b>Less is More:</b> All key ingredients are in `src/development`、`src/production` and webpack configurations, easy to understand、set-up and extend. We promise to use the most recent & official packages(as much as we can), no weird or tricky stuffs, keeping this project <b>clean and fully customizable</b>.
 
@@ -41,11 +41,11 @@ DEMO: Search Github Repositories.
 * ejs
 * jest
 * eslint(airbnb)
+* docker
 
 ### Roadmap
 
 * graphql(Github API v3 -> v4)
-* docker
 * flow
 * enzyme
 * immutable
@@ -73,8 +73,11 @@ yarn prod
 or with docker
 
 ```
-yarn prod:docker
+docker build -t koa-react-universal .
+docker run -d -p 3006:3006 koa-react-universal
 ```
+
+> Noted: If you are Chinese user, you need to uncomment/comment phrases in Dockerfile to boost your build/download speed.
 
 #### Development
 
@@ -94,4 +97,4 @@ yarn test
 
 ### Contributing
 
-
+Any PRs are welcome :)
