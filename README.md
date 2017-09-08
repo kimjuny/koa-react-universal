@@ -77,8 +77,6 @@ docker build -t koa-react-universal .
 docker run -d -p 3006:3006 koa-react-universal
 ```
 
-> Noted: If you are Chinese user, you need to uncomment/comment phrases in Dockerfile to boost your build/download speed.
-
 #### Development
 
 ```
