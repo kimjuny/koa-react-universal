@@ -8,7 +8,7 @@
     "prod": "npm run clean && cross-env NODE_ENV=production PORT=3006 node ./src/production",
     "dev": "cross-env NODE_ENV=development PORT=3006 node ./src/development",
     "lint": "./node_modules/.bin/eslint src",
-    "test": "./node_modules/.bin/jest --config jest.config.json --no-cache",
+    "test": "./node_modules/.bin/jest --config jest.config.js --no-cache",
     "codecov": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "dependencies": {
@@ -65,5 +65,6 @@
     "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.3"
-  }
+  },
+  "jest": {}
 }

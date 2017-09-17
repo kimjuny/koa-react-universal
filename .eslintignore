@@ -4,3 +4,4 @@
 /scripts/
 **/__tests__/
 **/statics.js
+wallaby.js

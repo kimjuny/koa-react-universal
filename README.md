@@ -42,6 +42,7 @@ DEMO: Search Github Repositories.
 * jest
 * eslint(airbnb)
 * docker
+* wallaby
 
 ### Roadmap
 
@@ -87,6 +88,12 @@ yarn dev
 
 ```
 yarn test
+```
+
+also supports [wallaby.js](https://wallabyjs.com/) live test reports [view](http://wallabyjs.com/app/#/files)
+
+```
+CMD + SHIFT + R -> R (vscode)
 ```
 
 ### License
