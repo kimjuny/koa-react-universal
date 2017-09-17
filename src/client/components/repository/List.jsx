@@ -27,7 +27,6 @@ const List = ({ repositories }) => {
   );
 };
 
-
 const mapStateToProps = state => ({ repositories: state.repository.repositories });
 
 export default connect(mapStateToProps)(List);

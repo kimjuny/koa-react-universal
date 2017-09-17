@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/repository/Tabs Tabs should render correctly 1`] = `
+<div
+  className="tabs"
+>
+  <div
+    className="tabs-main"
+  >
+    <a
+      className="tab tab-selected"
+    >
+      Repositories
+      <span>
+        48K
+      </span>
+    </a>
+    <a
+      className="tab"
+    >
+      Code
+      <span>
+        3M
+      </span>
+    </a>
+    <a
+      className="tab"
+    >
+      Commits
+      <span>
+        622K
+      </span>
+    </a>
+    <a
+      className="tab"
+    >
+      Issues
+      <span>
+        169K
+      </span>
+    </a>
+    <a
+      className="tab"
+    >
+      Wikis
+      <span>
+        10K
+      </span>
+    </a>
+    <a
+      className="tab"
+    >
+      Users
+      <span>
+        207
+      </span>
+    </a>
+  </div>
+</div>
+`;
