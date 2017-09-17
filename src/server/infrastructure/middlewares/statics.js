@@ -1,9 +1,4 @@
 /* eslint-disable */
-
-/**
- * Module dependencies.
- */
-
 const debug = require('debug')('koa-static')
 const { resolve } = require('path')
 const assert = require('assert')
@@ -12,7 +7,6 @@ const send = require('koa-send')
 /**
  * Expose `serve()`.
  */
-
 module.exports = serve
 
 /**
@@ -23,7 +17,6 @@ module.exports = serve
  * @return {Function}
  * @api public
  */
-
 function serve (root, opts) {
   opts = opts || {}
 
@@ -74,5 +67,4 @@ function serve (root, opts) {
     }
   }
 }
-
 /* eslint-enable */
