@@ -5,9 +5,9 @@ module.exports = (wallaby) => {
       { pattern: 'src/**/*.jsx', load: true },
       { pattern: 'src/**/__tests__/*.spec.js', ignore: true },
       { pattern: 'src/**/*.js', load: true },
-      { pattern: 'src/**/*.less', load: true },
+      { pattern: 'src/**/*.less', ignore: true },
       { pattern: 'jest.config.js', load: true },
-      { pattern: 'config/*.js', load: true },
+      { pattern: 'config/*.js', ignore: true },
     ],
     tests: [
       'src/**/__tests__/*.spec.js',
