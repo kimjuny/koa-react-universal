@@ -55,7 +55,7 @@
     "file-loader": "^1.1.0",
     "fs-extra": "^4.0.1",
     "ignore-loader": "^0.1.2",
-    "jest": "^21.0.0",
+    "jest": "^22.0.0",
     "koa-webpack-server": "^0.2.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
