@@ -27,4 +27,3 @@ export default () => (
     { routes.map(route => <RouteWithSubRoutes {...route} />) }
   </Switch>
 );
-
