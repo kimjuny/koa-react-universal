@@ -11,7 +11,7 @@ This project is dedicated to build <b>simple yet powerful</b> Koa-React-Universa
 
 <b>Less is More:</b> All key ingredients are in `src/development`、`src/production` and webpack configurations, easy to understand、set-up and extend. We promise to use the most recent & official packages(as much as we can), no weird or tricky stuffs, keeping this project <b>clean and fully customizable</b>.
 
-<b>Fully functional:</b> HMR for client and server side, code splitting for both javascript and css, universal support for async/await programming with koa2 server-side and redux-thunk client-side...
+<b>Fully functional:</b> HMR for client and server side, code splitting for both javascript and css, async/await universal programming support for koa2 server-side and redux-thunk client-side...
 
 <b>Universal:</b> We are using [react-universal-component](https://github.com/faceyspacey/react-universal-component)、[webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks). It simplifies <b>universal</b> development with <b>code-splitting</b>(js、css) and is also compatible with the latest react-router-v4.
 
