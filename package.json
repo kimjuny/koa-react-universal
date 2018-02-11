@@ -57,7 +57,7 @@
     "ignore-loader": "^0.1.2",
     "jest": "^21.0.0",
     "koa-webpack-server": "^0.2.0",
-    "less": "^2.7.2",
+    "less": "^3.0.0",
     "less-loader": "^4.0.5",
     "open-browser-webpack-plugin": "^0.0.5",
     "postcss-loader": "^2.0.6",
