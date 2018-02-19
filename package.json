@@ -12,7 +12,7 @@
     "codecov": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "colors": "^1.1.2",
     "ejs": "^2.5.7",
