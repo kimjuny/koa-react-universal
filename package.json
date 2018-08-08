@@ -60,7 +60,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "open-browser-webpack-plugin": "^0.0.5",
-    "postcss-loader": "^2.0.6",
+    "postcss-loader": "^3.0.0",
     "react-hot-loader": "next",
     "react-test-renderer": "16.2",
     "rimraf": "^2.6.1",
