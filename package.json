@@ -30,7 +30,7 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "url-parse": "^1.1.9",
-    "webpack-flush-chunks": "^1.1.22"
+    "webpack-flush-chunks": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
