@@ -52,7 +52,7 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.2.1",
     "extract-css-chunks-webpack-plugin": "^2.0.16",
-    "file-loader": "^1.1.0",
+    "file-loader": "^3.0.0",
     "fs-extra": "^5.0.0",
     "ignore-loader": "^0.1.2",
     "jest": "^21.0.0",
