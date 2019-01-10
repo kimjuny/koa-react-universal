@@ -64,7 +64,7 @@
     "react-hot-loader": "next",
     "react-test-renderer": "16.2",
     "rimraf": "^2.6.1",
-    "webpack": "^3.5.3"
+    "webpack": "^4.28.4"
   },
   "jest": {}
 }
