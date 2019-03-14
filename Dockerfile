@@ -4,7 +4,9 @@ FROM kkarczmarczyk/node-yarn
 
 # FROM registry.docker-cn.com/kkarczmarczyk/node-yarn
 
-ENV WORKSPACE=/root/workspace
+EXPOSE 3006
+
+ENV WORKSPACE=/opt/workspace
 
 RUN mkdir -p $WORKSPACE
 
@@ -20,4 +22,4 @@ RUN yarn
 
 ADD . $WORKSPACE
 
-CMD yarn prod
+CMD yarn docker
