@@ -13,7 +13,7 @@
     "codecov": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "classnames": "^2.2.5",
     "colors": "^1.1.2",
     "ejs": "^2.5.7",
@@ -22,14 +22,14 @@
     "koa-send": "^4.1.0",
     "koa-views": "^6.0.2",
     "lodash": "^4.17.4",
-    "react": "16.2",
-    "react-dom": "16.2",
-    "react-redux": "^5.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-universal-component": "^2.3.2",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "url-parse": "^1.1.9",
     "webpack-flush-chunks": "^1.1.22"
   },
