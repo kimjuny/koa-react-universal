@@ -17,7 +17,7 @@
     "classnames": "^2.2.5",
     "colors": "^1.1.2",
     "ejs": "^2.5.7",
-    "koa": "^2.7.0",
+    "koa": "^2.8.0",
     "koa-favicon": "^2.0.0",
     "koa-send": "^4.1.0",
     "koa-views": "^6.0.2",
