@@ -26,7 +26,7 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
+    "react-router-dom": "^5.1.0",
     "react-universal-component": "^2.3.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
