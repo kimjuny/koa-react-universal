@@ -51,7 +51,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.2.1",
+    "eslint-plugin-react": "^7.15.0",
     "extract-css-chunks-webpack-plugin": "^2.0.16",
     "file-loader": "^1.1.0",
     "fs-extra": "^5.0.0",
