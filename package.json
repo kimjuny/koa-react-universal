@@ -63,7 +63,7 @@
     "open-browser-webpack-plugin": "^0.0.5",
     "postcss-loader": "^3.0.0",
     "react-hot-loader": "next",
-    "react-test-renderer": "^16.8.6",
+    "react-test-renderer": "^16.10.2",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.3"
   },
