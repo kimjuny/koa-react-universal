@@ -46,7 +46,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "codeclimate-test-reporter": "^0.5.0",
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.11",
+    "css-loader": "^3.3.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.7.0",
