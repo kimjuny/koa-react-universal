@@ -27,7 +27,7 @@
     "react-redux": "^7.1.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-universal-component": "^2.3.2",
+    "react-universal-component": "^4.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "url-parse": "^1.1.9",
