@@ -16,7 +16,7 @@ ADD package.json $WORKSPACE
 
 # if you're in China, uncomment following phrase to boost your yarn with cn-npm-registry :)
 
-# RUN yarn config set registry https://registry.npm.taobao.org
+# RUN yarn config set registry https://registry.npmmirror.com
 
 RUN yarn
 
